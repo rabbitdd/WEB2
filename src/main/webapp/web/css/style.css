@@ -1,0 +1,149 @@
+
+table {
+    width: 100%;
+}
+#mainTable {
+    position: relative;
+}
+.header {
+    text-align: center;
+    font-family: Arial, fantasy;
+    color: ghostwhite;
+}
+.header p::first-line {
+    color: darkcyan;
+}
+
+body {
+    margin: 0 auto;
+    width: 100%;
+}
+/* селектор атрибутов */
+input[type="checkbox"] {
+    transform:scale(1.6);
+    opacity:0.9;
+    cursor:pointer;
+}
+
+input[type="radio"] {
+    transform:scale(1.3);
+    opacity:0.9;
+    cursor:pointer;
+}
+.validateBtn {
+    border-radius: 20px;
+    background-color: whitesmoke;
+}
+.validateBtn:hover {
+    background: deepskyblue;
+    transition: all 0.5s ease-out;
+    transform: scale(1.1);
+
+}
+p {
+    font-size: 25px;
+    margin: 5px;
+}
+
+.X, .Y, .ANS, .R, .TIME, .CURRENT_time {
+    border: ghostwhite;
+    color: ghostwhite;
+    font-size: 20px;
+}
+
+.yes {
+    color: lightgreen;
+    font-weight: bold;
+}
+.no {
+    color: red;
+    font-weight: bold;
+}
+.triangle:hover {
+    fill: ghostwhite;
+    fill-opacity: 0.9;
+}
+.half_circle:hover {
+    fill: ghostwhite;
+    fill-opacity: 0.9;
+}
+.rectangle:hover {
+    fill: ghostwhite;
+    fill-opacity: 0.9;
+}
+
+
+/*.intro {
+    max-height: 100vh;
+    position: relative;
+
+
+}
+
+.intro_content {
+    display: flex;
+
+    width: 100%;
+    height: 100%;
+
+    position: absolute;
+    top: 0;
+    left: 0;
+    z-index: 3;
+}
+.video {
+    position: relative;
+    z-index: 1;
+    padding-bottom: 56.25%;
+}
+
+.video_content {
+    width: 100%;
+    height: auto;
+    position: absolute;
+    top: 0;
+    left: 0;
+
+}
+.result_table {
+    border: none;
+    position: relative;
+    bottom: 5px;
+    left: 0;
+    right: 0;
+}
+ */
+button {
+    outline: none;
+}
+.text {
+    border-radius: 20px;
+    width: 100px;
+    height: 40px;
+    border-color: darkcyan;
+
+}
+.text:focus {
+    outline: none;
+}
+
+
+.data_y, .data_x, .data_r {
+    margin: 20px;
+    width: 60px;
+    padding: 10% 15% 10% 15%;
+}
+.data_x td, .data_r td {
+    color: whitesmoke;
+}
+
+td {
+    text-align: center;
+    padding: 5px;
+}
+input[type="button"] {
+    height: 30px;
+    width: 35px;
+    background-color: blue;
+    color: white;
+}
