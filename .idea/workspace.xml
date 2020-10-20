@@ -2,11 +2,18 @@
 <project version="4">
   <component name="ArtifactsWorkspaceSettings">
     <artifacts-to-build>
-      <artifact name="WEB2:war exploded" />
+      <artifact name="WEB2:war2" />
     </artifacts-to-build>
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="1fd124bd-2ecd-4bdf-9822-c8f1887356a0" name="Default Changelist" comment="" />
+    <list default="true" id="1fd124bd-2ecd-4bdf-9822-c8f1887356a0" name="Default Changelist" comment="">
+      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/servlet/AreaCheckServlet.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/servlet/AreaCheckServlet.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/webapp/web/js/scriptForTablePage.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/webapp/web/js/scriptForTablePage.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/webapp/web/js/validation.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/webapp/web/js/validation.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/WEB2/web/js/scriptForTablePage.js" beforeDir="false" afterPath="$PROJECT_DIR$/target/WEB2/web/js/scriptForTablePage.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/WEB2/web/js/validation.js" beforeDir="false" afterPath="$PROJECT_DIR$/target/WEB2/web/js/validation.js" afterDir="false" />
+    </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
     <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />
@@ -27,6 +34,7 @@
     <option name="RECENT_GIT_ROOT_PATH" value="$PROJECT_DIR$" />
   </component>
   <component name="ProjectId" id="1iVGW8dVi8THWWtS4lAo18vQwGr" />
+  <component name="ProjectLevelVcsManager" settingsEditedManually="true" />
   <component name="ProjectViewState">
     <option name="hideEmptyMiddlePackages" value="true" />
     <option name="showExcludedFiles" value="true" />
@@ -48,7 +56,7 @@
     <property name="node.js.path.for.package.tslint" value="project" />
     <property name="node.js.selected.package.eslint" value="(autodetect)" />
     <property name="node.js.selected.package.tslint" value="(autodetect)" />
-    <property name="project.structure.last.edited" value="Libraries" />
+    <property name="project.structure.last.edited" value="Artifacts" />
     <property name="project.structure.proportion" value="0.0" />
     <property name="project.structure.side.proportion" value="0.2" />
     <property name="settings.editor.selected.configurable" value="experimental" />
@@ -65,6 +73,8 @@
   <component name="RunManager">
     <configuration name="Jboss" type="JBossConfiguration" factoryName="Local" APPLICATION_SERVER_NAME="JBoss 21.0.0.Beta1" ALTERNATIVE_JRE_ENABLED="false">
       <option name="OPEN_IN_BROWSER_URL" value="http://localhost:8080/WEB2/index.jsp" />
+      <option name="BROWSER_ID" value="98ca6316-2f89-46d9-a9e5-fa9e2b0625b3" />
+      <option name="COMMON_VM_ARGUMENTS" value=" -Djboss.socket.binding.port-offset=0" />
       <option name="UPDATING_POLICY" value="restart-server" />
       <deployment>
         <artifact name="WEB2:war exploded">
@@ -176,6 +186,8 @@
       <workItem from="1602763862540" duration="16777000" />
       <workItem from="1602940021442" duration="30695000" />
       <workItem from="1603010750407" duration="29237000" />
+      <workItem from="1603048180928" duration="1688000" />
+      <workItem from="1603107689240" duration="14446000" />
     </task>
     <servers />
   </component>
@@ -191,10 +203,14 @@
       <screen x="0" y="0" width="1280" height="680" />
     </state>
     <state x="233" y="0" key="#JBoss_Server/0.0.1280.680@0.0.1280.680" timestamp="1601987031706" />
-    <state x="96" y="0" key="#com.intellij.execution.impl.EditConfigurationsDialog" timestamp="1602951496406">
+    <state x="371" y="0" width="540" height="680" key="#Jboss" timestamp="1603119170556">
       <screen x="0" y="0" width="1280" height="680" />
     </state>
-    <state x="96" y="0" key="#com.intellij.execution.impl.EditConfigurationsDialog/0.0.1280.680@0.0.1280.680" timestamp="1602951496406" />
+    <state x="371" y="0" width="540" height="680" key="#Jboss/0.0.1280.680@0.0.1280.680" timestamp="1603119170556" />
+    <state x="96" y="0" key="#com.intellij.execution.impl.EditConfigurationsDialog" timestamp="1603119319765">
+      <screen x="0" y="0" width="1280" height="680" />
+    </state>
+    <state x="96" y="0" key="#com.intellij.execution.impl.EditConfigurationsDialog/0.0.1280.680@0.0.1280.680" timestamp="1603119319765" />
     <state x="446" y="49" key="#com.intellij.ide.util.MemberChooser" timestamp="1602970050897">
       <screen x="0" y="0" width="1280" height="680" />
     </state>
@@ -211,46 +227,46 @@
       <screen x="0" y="0" width="1280" height="680" />
     </state>
     <state x="421" y="81" key="FileChooserDialogImpl/0.0.1280.680@0.0.1280.680" timestamp="1601987008576" />
-    <state width="845" height="200" key="GridCell.Tab.0.bottom" timestamp="1603047614943">
+    <state width="845" height="200" key="GridCell.Tab.0.bottom" timestamp="1603127836008">
       <screen x="0" y="0" width="1280" height="680" />
     </state>
-    <state width="845" height="200" key="GridCell.Tab.0.bottom/0.0.1280.680@0.0.1280.680" timestamp="1603047614943" />
-    <state width="845" height="200" key="GridCell.Tab.0.center" timestamp="1603047614943">
+    <state width="845" height="200" key="GridCell.Tab.0.bottom/0.0.1280.680@0.0.1280.680" timestamp="1603127836008" />
+    <state width="845" height="200" key="GridCell.Tab.0.center" timestamp="1603127836007">
       <screen x="0" y="0" width="1280" height="680" />
     </state>
-    <state width="845" height="200" key="GridCell.Tab.0.center/0.0.1280.680@0.0.1280.680" timestamp="1603047614943" />
-    <state width="845" height="200" key="GridCell.Tab.0.left" timestamp="1603047614942">
+    <state width="845" height="200" key="GridCell.Tab.0.center/0.0.1280.680@0.0.1280.680" timestamp="1603127836007" />
+    <state width="845" height="200" key="GridCell.Tab.0.left" timestamp="1603127836007">
       <screen x="0" y="0" width="1280" height="680" />
     </state>
-    <state width="845" height="200" key="GridCell.Tab.0.left/0.0.1280.680@0.0.1280.680" timestamp="1603047614942" />
-    <state width="845" height="200" key="GridCell.Tab.0.right" timestamp="1603047614943">
+    <state width="845" height="200" key="GridCell.Tab.0.left/0.0.1280.680@0.0.1280.680" timestamp="1603127836007" />
+    <state width="845" height="200" key="GridCell.Tab.0.right" timestamp="1603127836008">
       <screen x="0" y="0" width="1280" height="680" />
     </state>
-    <state width="845" height="200" key="GridCell.Tab.0.right/0.0.1280.680@0.0.1280.680" timestamp="1603047614943" />
-    <state width="845" height="200" key="GridCell.Tab.1.bottom" timestamp="1603044877298">
+    <state width="845" height="200" key="GridCell.Tab.0.right/0.0.1280.680@0.0.1280.680" timestamp="1603127836008" />
+    <state width="845" height="200" key="GridCell.Tab.1.bottom" timestamp="1603119184243">
       <screen x="0" y="0" width="1280" height="680" />
     </state>
-    <state width="845" height="200" key="GridCell.Tab.1.bottom/0.0.1280.680@0.0.1280.680" timestamp="1603044877298" />
-    <state width="845" height="200" key="GridCell.Tab.1.center" timestamp="1603044877297">
+    <state width="845" height="200" key="GridCell.Tab.1.bottom/0.0.1280.680@0.0.1280.680" timestamp="1603119184243" />
+    <state width="845" height="200" key="GridCell.Tab.1.center" timestamp="1603119184242">
       <screen x="0" y="0" width="1280" height="680" />
     </state>
-    <state width="845" height="200" key="GridCell.Tab.1.center/0.0.1280.680@0.0.1280.680" timestamp="1603044877297" />
-    <state width="845" height="200" key="GridCell.Tab.1.left" timestamp="1603044877297">
+    <state width="845" height="200" key="GridCell.Tab.1.center/0.0.1280.680@0.0.1280.680" timestamp="1603119184242" />
+    <state width="845" height="200" key="GridCell.Tab.1.left" timestamp="1603119184242">
       <screen x="0" y="0" width="1280" height="680" />
     </state>
-    <state width="845" height="200" key="GridCell.Tab.1.left/0.0.1280.680@0.0.1280.680" timestamp="1603044877297" />
-    <state width="845" height="200" key="GridCell.Tab.1.right" timestamp="1603044877298">
+    <state width="845" height="200" key="GridCell.Tab.1.left/0.0.1280.680@0.0.1280.680" timestamp="1603119184242" />
+    <state width="845" height="200" key="GridCell.Tab.1.right" timestamp="1603119184243">
       <screen x="0" y="0" width="1280" height="680" />
     </state>
-    <state width="845" height="200" key="GridCell.Tab.1.right/0.0.1280.680@0.0.1280.680" timestamp="1603044877297" />
-    <state x="121" y="0" key="SettingsEditor" timestamp="1602948933491">
+    <state width="845" height="200" key="GridCell.Tab.1.right/0.0.1280.680@0.0.1280.680" timestamp="1603119184243" />
+    <state x="121" y="0" key="SettingsEditor" timestamp="1603049375086">
       <screen x="0" y="0" width="1280" height="680" />
     </state>
-    <state x="121" y="0" key="SettingsEditor/0.0.1280.680@0.0.1280.680" timestamp="1602948933491" />
-    <state x="337" y="164" key="com.intellij.ide.util.TipDialog" timestamp="1603048187311">
+    <state x="121" y="0" key="SettingsEditor/0.0.1280.680@0.0.1280.680" timestamp="1603049375086" />
+    <state x="337" y="164" key="com.intellij.ide.util.TipDialog" timestamp="1603107696689">
       <screen x="0" y="0" width="1280" height="680" />
     </state>
-    <state x="337" y="164" key="com.intellij.ide.util.TipDialog/0.0.1280.680@0.0.1280.680" timestamp="1603048187311" />
+    <state x="337" y="164" key="com.intellij.ide.util.TipDialog/0.0.1280.680@0.0.1280.680" timestamp="1603107696689" />
     <state x="375" y="233" key="com.intellij.jarRepository.RepositoryAttachDialog-DOWNLOAD" timestamp="1602948925616">
       <screen x="0" y="0" width="1280" height="680" />
     </state>

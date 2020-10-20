@@ -7,6 +7,7 @@ import javax.servlet.http.HttpServlet;
 import javax.servlet.http.HttpServletRequest;
 import javax.servlet.http.HttpServletResponse;
 import java.io.IOException;
+import java.text.DecimalFormat;
 import java.util.*;
 import java.util.regex.Pattern;
 
@@ -44,7 +45,7 @@ public class AreaCheckServlet extends HttpServlet implements Validation{
             data.add(0, preparingData(Double.parseDouble(r), Double.parseDouble(x), Double.parseDouble(y), estimatedTime, ans));
             RequestDispatcher requestDispatcher = request.getRequestDispatcher("/table.jsp");
             requestDispatcher.forward(request, response);
-        } catch (NumberFormatException | InvalidException e) {
+        } catch (Exception e) {
             response.sendError(HttpServletResponse.SC_BAD_REQUEST);
             //RequestDispatcher requestDispatcher = request.getRequestDispatcher("/errorPage.jsp");
             //requestDispatcher.forward(request, response);
@@ -64,10 +65,14 @@ public class AreaCheckServlet extends HttpServlet implements Validation{
 
     @Override
     public boolean isValid(String x, String y, String r) throws InvalidException {
+        //DecimalFormat decimalFormat = new DecimalFormat("0.#");
         String[] args = x.split("\\.");
         //log(args[0] + args[1]);
         Pattern pattern = Pattern.compile("[1-9]");
+        //System.out.println(decimalFormat.format(Boolean.parseBoolean(y)));
         if ((Integer.parseInt(args[0]) >= 5 && pattern.matcher(args[1]).find())) {
+                //|| !rArea.contains(decimalFormat.format(Boolean.parseBoolean(r)))
+                //|| !yArea.contains(decimalFormat.format(Boolean.parseBoolean(y)))) {
             throw new InvalidException();
         }
         return true;

@@ -44,7 +44,7 @@ const pt = svg.createSVGPoint();
 const send = function (x, y, r) {
     $.ajax({
         type: 'GET',
-        url: "/WEB2/welcome/"
+        url: "/WEB2_war/welcome/"
             .concat("?x=")
             .concat(x)
             .concat("&y=")
@@ -53,13 +53,15 @@ const send = function (x, y, r) {
         success: function (response) {
             //console.log(response.status);
             console.log(response);
-            location.href = "http://localhost:8080/WEB2/table.jsp";
+            //location.href = "http://localhost:8080/WEB2/table.jsp";
+            location.href = "http://localhost:41100/WEB2_war/table.jsp";
             //localStorage.setItem('history', response);
             alert("Отлично!");
             //event.preventDefault();
         },
         error: function (response) {
-            location.href = "http://localhost:8080/WEB2/errorPage.jsp";
+            //location.href = "http://localhost:8080/WEB2/errorPage.jsp";
+            location.href = "http://localhost:41100/WEB2_war/errorPage.jsp";
             console.log(response);
             //$(".intro").html(response);
         }
@@ -71,7 +73,7 @@ const draw = function (event) {
     pt.x = event.clientX;
     pt.y = event.clientY;
     const cursorpt = pt.matrixTransform(svg.getScreenCTM().inverse());
-    circle.style.fill = "red";
+    circle.style.fill = "yellow";
     circle.style.r = "3";
     circle.style.cx = cursorpt.x;
     circle.style.cy = cursorpt.y;
@@ -81,43 +83,25 @@ const draw = function (event) {
     localStorage.setItem("points", localStorage.getItem("points").concat(String(cursorpt.x).concat(";").concat(String(cursorpt.y).concat(";"))));
     console.log(localStorage.getItem("points"));
     //console.log(circle);
-    //send((cursorpt.x - 150) * (r / 100), (150 - cursorpt.y) * (r / 100), r);
+    send((cursorpt.x - 150) * (r / 100), (150 - cursorpt.y) * (r / 100), r);
 };
-var signal = false;
-
 document.getElementById("triangle").addEventListener("mouseup", function (e) {
-    signal = true;
-    //document.getElementById("triangle").style.fill = arr[randomInteger(0, 4)];
-    let rad = rArea();
-    if (rad === 1) {
-       draw(e);
-    } else
-        alert("Выберите единственный радиус !");
+    //
 });
 
 document.getElementById("rectangle").addEventListener("mouseup", function (e) {
-    signal = true;
-    let rad = rArea();
-    if (rad === 1) {
-        draw(e);
-    } else
-        alert("Выберите единственный радиус !");
-    //document.getElementById("rectangle").style.fill = arr[randomInteger(0, 4)];
+   //
 });
 
 document.getElementById("half_circle").addEventListener("mouseup", function (e) {
-    signal = true;
+    //
+});
+document.getElementById("svg").addEventListener("mouseup", function (e) {
     let rad = rArea();
     if (rad === 1) {
         draw(e);
     } else
         alert("Выберите единственный радиус !");
-    //document.getElementById("half_circle").style.fill = arr[randomInteger(0, 4)];
-
-});
-document.getElementById("svg").addEventListener("mouseup", function () {
-    signal ? console.log("Hello") : alert("ERROR");
-    signal = false;
 });
 
 document.getElementById("button").addEventListener("mousemove",function () {
@@ -141,7 +125,7 @@ button_reset.addEventListener("click", function (){
     event.preventDefault();
     $.ajax({
         type: 'GET',
-        url: "/WEB2/welcome/?flag=1",
+        url: "/WEB2_war/welcome/?flag=1",
         success: function (html) {
             $(".intro").html(html);
         }
@@ -173,7 +157,7 @@ button.addEventListener("click", function () {
     if (!x.value.length) {
         alert("Введите икс");
     } else {
-        console.log(x.value);
+        console.log(x.value.replace(/\s+/g, ''));
         let wrong = 0;
         for (let i = 0; i < check_box.length; i++)
             if (check_box[i].checked) {
@@ -181,7 +165,7 @@ button.addEventListener("click", function () {
                 console.log(check_box[i].value);
                 check++;
             }
-        if (isNaN(x.value) || checkOdz(x.value)) {
+        if (isNaN(x.value.replace(/\s+/g, '')) || checkOdz(x.value.replace(/\s+/g, ''))) {
             alert("Некорректный ввод! ".concat(" Вводить можно только числа в диапазоне от -5 до 5"));
             wrong = 1;
             event.preventDefault();
@@ -200,25 +184,27 @@ button.addEventListener("click", function () {
             event.preventDefault();
         }
         if (wrong === 0) {
-            console.log(x.value);
+            console.log(x.value.replace(/\s+/g, ''));
             $.ajax({
                 type: 'GET',
-                url: "/WEB2/welcome/"
+                url: "/WEB2_war/welcome/"
                     .concat("?x=")
-                    .concat(x.value)
+                    .concat(x.value.replace(/\s+/g, ''))
                     .concat("&y=")
                     .concat(y_val).concat("&r=")
                     .concat(r),
                 success: function (response) {
                     //console.log(response.status);
                     console.log(response);
-                    location.href = "http://localhost:8080/WEB2/table.jsp";
+                    //location.href = "http://localhost:8080/WEB2/table.jsp";
+                    location.href = "http://localhost:41100/WEB2_war/table.jsp";
                     //localStorage.setItem('history', response);
                     alert("Отлично!");
                     //event.preventDefault();
                 },
                 error: function (response) {
-                    location.href = "http://localhost:8080/WEB2/errorPage.jsp";
+                    //location.href = "http://localhost:8080/WEB2/errorPage.jsp";
+                    location.href = "http://localhost:41100/WEB2_war/errorPage.jsp";
                     console.log(response);
                     //$(".intro").html(response);
                 }
@@ -232,7 +218,7 @@ if (window.performance) {
     ptn = localStorage.getItem("points").split(";");
     for (let i = 0; i < ptn.length; i+=2) {
         let circle = document.createElementNS("http://www.w3.org/2000/svg", 'circle');
-        circle.style.fill = "red";
+        circle.style.fill = "yellow";
         circle.style.r = "3";
         circle.style.cx = ptn[i];
         circle.style.cy = ptn[i + 1];
